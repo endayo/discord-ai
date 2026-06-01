@@ -2,7 +2,7 @@
 FROM node:20-alpine
 
 # PID1 問題対策（tiniを使う場合）
-RUN apk add --no-cache tini
+RUN apk add --no-cache tini curl
 
 # 実行ディレクトリ
 WORKDIR /app
