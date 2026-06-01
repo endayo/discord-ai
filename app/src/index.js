@@ -1,6 +1,6 @@
 import { Client, GatewayIntentBits, Partials, Events, ShardEvents } from 'discord.js'
 import 'dotenv/config'
-import { Chat } from './openai.js';
+import { Chat } from './ollama.js'
 
 // ==== env ====
 const {
@@ -10,8 +10,8 @@ const {
   ALLOWED_CHANNEL_IDS
 } = process.env
 
-if (!DISCORD_BOT_TOKEN || !OPENAI_API_KEY) {
-  console.error('ERROR: DISCORD_BOT_TOKEN and OPENAI_API_KEY are required.')
+if (!DISCORD_BOT_TOKEN) {
+  console.error('ERROR: DISCORD_BOT_TOKEN are required.')
   process.exit(1)
 }
 
